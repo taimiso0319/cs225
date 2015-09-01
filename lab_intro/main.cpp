@@ -36,6 +36,32 @@ PNG drawCrosshairs(PNG original, int centerX, int centerY, RGBAPixel color)
     return original;
 }
 
+PNG rotateImage(PNG original)
+{
+    RGBAPixel imageColor;
+    int width = original.width();
+    int height = original.height();
+    PNG tempImage(width,height);
+    //test//
+    /*
+    imageColor.red = 255;
+    imageColor.blue = 0;
+    imageColor.green = 0;
+    imageColor.alpha = 255;
+    */
+    for(int i = 0; i < width; i++)
+    {
+        for(int j = 0; j < height; j++)
+        {
+            //*tempImage(i, j) = imageColor; //original(i,j);
+            imageColor = *original(i,j);
+            *tempImage(width - i - 1, height - j -1) = imageColor;
+            cout << i << "" << j << endl;
+        }
+    }
+    return tempImage;
+}
+
 /**
  * This function brightens a rectangle of a PNG, increasing the components
  * (red, green, blue) of each pixel by the given amount. You must account
@@ -91,7 +117,7 @@ PNG blendImages(PNG firstImage, PNG secondImage)
 int main()
 {
     // Open a new PNG image from the file sample.png.
-    PNG image("sample.png");
+    PNG image("in.png");
 
     // Open a new PNG image from the file overlay.png.
     PNG overlay("overlay.png");
@@ -109,12 +135,14 @@ int main()
     cyanColor.blue = 255;
 
     // Draw two crosshairs on the image.
-    image = drawCrosshairs(image, 400, 330, cyanColor);
-    image = drawCrosshairs(image, 620, 424, cyanColor);
+    //image = drawCrosshairs(image, 400, 330, cyanColor);
+    //image = drawCrosshairs(image, 620, 424, cyanColor);
 
     // Save the modified image to a file called output.png, overwriting the file
     // if it already exists.
     image.writeToFile("output.png");
+    image = rotateImage(image);
+    image.writeToFile("test.png");
 
     return 0;
 }

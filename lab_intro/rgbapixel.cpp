@@ -1,4 +1,4 @@
-#include <rgbapixel.h>
+#include "rgbapixel.h"
 
 RGBAPixel::RGBAPixel()
 {

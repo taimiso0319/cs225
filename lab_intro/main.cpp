@@ -36,8 +36,9 @@ PNG drawCrosshairs(PNG original, int centerX, int centerY, RGBAPixel color)
     return original;
 }
 
-PNG rotateImage(PNG original)
+PNG rotateImage(PNG original, int degree)
 {
+    if(degree != 90 && degree != 180 && degree != 270) degree = 0;
     RGBAPixel imageColor;
     int width = original.width();
     int height = original.height();
@@ -141,7 +142,7 @@ int main()
     // Save the modified image to a file called output.png, overwriting the file
     // if it already exists.
     image.writeToFile("output.png");
-    image = rotateImage(image);
+    image = rotateImage(image,90);
     image.writeToFile("test.png");
 
     return 0;

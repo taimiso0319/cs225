@@ -1,0 +1,60 @@
+Grading revision r2602 by kyasuda2, dated 2015-08-30 12:30:05.000650525 -0500 CDT
+Monad Autograder
+Testing lab_intro at 2015-08-31 00:32:25
+
+"I didn't say I wanted to die in a blender! I said I wanted to be in a blender!" ~ Kyle Johnson
+
+Setting up test environment...
+Compiling...
+================================================================
+main.cpp:53:32: warning: unused parameter 'amount' [-Wunused-parameter]
+PNG brighten(PNG original, int amount)
+                               ^
+main.cpp:78:37: warning: unused parameter 'secondImage' [-Wunused-parameter]
+PNG blendImages(PNG firstImage, PNG secondImage)
+                                    ^
+2 warnings generated.
+main.cpp:53:32: warning: unused parameter 'amount' [-Wunused-parameter]
+PNG brighten(PNG original, int amount)
+                               ^
+main.cpp:78:37: warning: unused parameter 'secondImage' [-Wunused-parameter]
+PNG blendImages(PNG firstImage, PNG secondImage)
+                                    ^
+2 warnings generated.
+
+
+Running tests...
+================================================================
+testBrighten  . [33 pts] - FAILED: unit_tests.cpp:59: [(int)brightened(x, y)->red => 0] != [image(x, y)->red + 100 => 100]
+testCrosshairs  [33 pts] - passed
+testBlendImages [34 pts] - FAILED: unit_tests.cpp:109: Assertion (abs((image1(x, y)->red + image2(x, y)->red)/2 - blended(x, y)->red) <= 1) failed
+
+
+Total score...
+================================================================
+TOTAL SCORE: 33
+
+
+
+Detailed test output...
+================================================================
+----------------------------------------------------------------
+testBrighten [33 points]
+Result: FAILED: unit_tests.cpp:59: [(int)brightened(x, y)->red => 0] != [image(x, y)->red + 100 => 100]
+Took 0ms (1000ms timeout)
+Output:
+----------------------------------------------------------------
+
+----------------------------------------------------------------
+testBlendImages [34 points]
+Result: FAILED: unit_tests.cpp:109: Assertion (abs((image1(x, y)->red + image2(x, y)->red)/2 - blended(x, y)->red) <= 1) failed
+Took 0ms (1000ms timeout)
+Output:
+----------------------------------------------------------------
+
+
+----------------------------------------------------------------
+Total score...
+================================================================
+TOTAL SCORE: 33
+

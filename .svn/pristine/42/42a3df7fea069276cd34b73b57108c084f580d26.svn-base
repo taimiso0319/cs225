@@ -1,0 +1,91 @@
+Grading revision r4237 by kyasuda2, dated 2015-09-01 12:56:22.000590869 -0500 CDT
+Monad Autograder
+Testing mp1 at 2015-09-02 00:35:53
+
+"Programs must be written for people to read, and only incidentally for machines to execute." ~ Abelson and Sussman
+
+Setting up test environment...
+Compiling...
+================================================================
+unit_tests.cpp:27:15: error: no matching constructor for initialization of 'RGBAPixel'
+    RGBAPixel three( 100, 200, 30 );
+              ^      ~~~~~~~~~~~~
+./rgbapixel.h:7:7: note: candidate constructor (the implicit copy constructor) not viable: requires 1 argument, but 3 were provided
+class RGBAPixel{
+      ^
+./rgbapixel.h:7:7: note: candidate constructor (the implicit move constructor) not viable: requires 1 argument, but 3 were provided
+./rgbapixel.h:9:9: note: candidate constructor not viable: requires 0 arguments, but 3 were provided
+        RGBAPixel();
+        ^
+1 error generated.
+unit_tests.cpp:27:15: error: no matching constructor for initialization of 'RGBAPixel'
+    RGBAPixel three( 100, 200, 30 );
+              ^      ~~~~~~~~~~~~
+./rgbapixel.h:7:7: note: candidate constructor (the implicit copy constructor) not viable: requires 1 argument, but 3 were provided
+class RGBAPixel{
+      ^
+./rgbapixel.h:7:7: note: candidate constructor (the implicit move constructor) not viable: requires 1 argument, but 3 were provided
+./rgbapixel.h:9:9: note: candidate constructor not viable: requires 0 arguments, but 3 were provided
+        RGBAPixel();
+        ^
+1 error generated.
+unit_tests.cpp:27:15: error: no matching constructor for initialization of 'RGBAPixel'
+    RGBAPixel three( 100, 200, 30 );
+              ^      ~~~~~~~~~~~~
+./rgbapixel.h:7:7: note: candidate constructor (the implicit copy constructor) not viable: requires 1 argument, but 3 were provided
+class RGBAPixel{
+      ^
+./rgbapixel.h:7:7: note: candidate constructor (the implicit move constructor) not viable: requires 1 argument, but 3 were provided
+./rgbapixel.h:9:9: note: candidate constructor not viable: requires 0 arguments, but 3 were provided
+        RGBAPixel();
+        ^
+1 error generated.
+ld: no input files
+unit_tests.cpp:27:15: error: no matching constructor for initialization of 'RGBAPixel'
+    RGBAPixel three( 100, 200, 30 );
+              ^      ~~~~~~~~~~~~
+./rgbapixel.h:7:7: note: candidate constructor (the implicit copy constructor) not viable: requires 1 argument, but 3 were provided
+class RGBAPixel{
+      ^
+./rgbapixel.h:7:7: note: candidate constructor (the implicit move constructor) not viable: requires 1 argument, but 3 were provided
+./rgbapixel.h:9:9: note: candidate constructor not viable: requires 0 arguments, but 3 were provided
+        RGBAPixel();
+        ^
+1 error generated.
+clang-3.5: error: no such file or directory: 'unit_tests.o'
+make: *** [proxy] Error 1
+make: *** Waiting for unfinished jobs....
+unit_tests.cpp:27:15: error: no matching constructor for initialization of 'RGBAPixel'
+    RGBAPixel three( 100, 200, 30 );
+              ^      ~~~~~~~~~~~~
+./rgbapixel.h:7:7: note: candidate constructor (the implicit copy constructor) not viable: requires 1 argument, but 3 were provided
+class RGBAPixel{
+      ^
+./rgbapixel.h:7:7: note: candidate constructor (the implicit move constructor) not viable: requires 1 argument, but 3 were provided
+./rgbapixel.h:9:9: note: candidate constructor not viable: requires 0 arguments, but 3 were provided
+        RGBAPixel();
+        ^
+1 error generated.
+unit_tests.cpp:27:15: error: no matching constructor for initialization of 'RGBAPixel'
+    RGBAPixel three( 100, 200, 30 );
+              ^      ~~~~~~~~~~~~
+./rgbapixel.h:7:7: note: candidate constructor (the implicit copy constructor) not viable: requires 1 argument, but 3 were provided
+class RGBAPixel{
+      ^
+./rgbapixel.h:7:7: note: candidate constructor (the implicit move constructor) not viable: requires 1 argument, but 3 were provided
+./rgbapixel.h:9:9: note: candidate constructor not viable: requires 0 arguments, but 3 were provided
+        RGBAPixel();
+        ^
+1 error generated.
+ld: no input files
+
+
+Running tests...
+================================================================
+Could not execute test cases
+
+
+Total score...
+================================================================
+TOTAL SCORE: 0
+
